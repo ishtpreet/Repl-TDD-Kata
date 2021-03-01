@@ -16,16 +16,20 @@ class Main {
     if(commaCount == 0){
       return Integer.parseInt(numbers);
     }
-    //Two Numbers in the String
+    //Two or more Numbers in the String
     String[] strNumbers = numbers.split(",");
-    return Integer.parseInt(strNumbers[0])+Integer.parseInt(strNumbers[1]); 
+    int Sum=0;
+    for(int i=0;i<strNumbers.length;i++){
+      Sum += Integer.parseInt(strNumbers[i]);
+    }
+    return Sum;
     
   }
   public static void main(String[] args) {
     System.out.println("Hello world!");
     System.out.println(Add(""));
     System.out.println(Add("1"));
-    System.out.println(Add("2,3"));
+    System.out.println(Add("2,3,6,4,3,1,3,2,332,3"));
 
 
   }
