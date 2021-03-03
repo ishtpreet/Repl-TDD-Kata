@@ -16,9 +16,9 @@ class Main {
     if(commaCount == 0){
       return Integer.parseInt(numbers);
     }
+    //Two or more Numbers in the String
     //Replacing \n with comma
     numbers = numbers.replace('\n',',');
-    //Two or more Numbers in the String
     String[] strNumbers = numbers.split(",");
     int Sum=0;
     for(int i=0;i<strNumbers.length;i++){
