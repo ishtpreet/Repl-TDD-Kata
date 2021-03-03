@@ -8,7 +8,7 @@ class Main {
     int commaCount = 0;
     //Counter Number of Occurences of Comma 
     for(int i=0;i<numbers.length();i++){
-      if(numbers.charAt(i) == ','){
+      if(numbers.charAt(i) == ',' || numbers.charAt(i)=='\n'){
         commaCount++;
       }
     }
@@ -16,6 +16,8 @@ class Main {
     if(commaCount == 0){
       return Integer.parseInt(numbers);
     }
+    //Replacing \n with comma
+    numbers = numbers.replace('\n',',');
     //Two or more Numbers in the String
     String[] strNumbers = numbers.split(",");
     int Sum=0;
@@ -26,10 +28,9 @@ class Main {
     
   }
   public static void main(String[] args) {
-    System.out.println("Hello world!");
     System.out.println(Add(""));
     System.out.println(Add("1"));
-    System.out.println(Add("2,3,6,4,3,1,3,2,332,3"));
+    System.out.println(Add("2\n3\n6,4,3,1,3,2,332,3"));
 
 
   }
